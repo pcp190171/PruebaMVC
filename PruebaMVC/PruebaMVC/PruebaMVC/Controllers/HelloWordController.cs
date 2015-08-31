@@ -16,9 +16,10 @@ namespace PruebaMVC.Controllers
             return "My default action ...";
         }
 
-        public string Welcome()
+        public string Welcome(string name, int numTimes = 1)
         {
-            return "Welcome action.";
+            string message = "Hello " + name + ", NumTimes is: " + numTimes;
+            return "" + Server.HtmlEncode(message) +"";
         }
 
     }
